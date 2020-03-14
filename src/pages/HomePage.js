@@ -1,9 +1,12 @@
 import React from 'react';
 
-const HomePage = () => (
-  <React.Fragment>
-    <h1>Home Page</h1>
-    <p>Some text</p>
-  </React.Fragment>
-);
+const HomePage = () => {
+  return (
+    <div>
+      <h1>Home Page</h1>
+      <p>Some text</p>
+    </div>
+  )
+};
+
 export default HomePage;

@@ -1,17 +1,17 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 
 const ArticlesList = ({ articles_data }) => (
-  <React.Fragment>
+  <Fragment>
     {articles_data.map((article, key) => (
-      <React.Fragment key={key}>
+      <div key={key} className='p10 bg-gr' >
         <Link to={`article/${article.name}`}>
-          <h3>{article.title}</h3>
+          <h3 className='p10 bg-gr'>{article.title}</h3>
         </Link>
-        <p>{article.content[0].substring(0, 150)} ...</p>
-      </React.Fragment>
+        <p className='p10 bg-gr'>{article.content[0].substring(0, 150)} ...</p>
+      </div>
     ))}
-  </React.Fragment>
+  </Fragment>
 );
 
 export default ArticlesList;

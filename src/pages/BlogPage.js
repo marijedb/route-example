@@ -1,21 +1,23 @@
 import React from "react";
-import Art_List from "../components/ListOfArticles";
-import art_DB from "../data/articles_database";
+import ArticlesList from "../components/ListOfArticles";
+import articlesDatabase from "../data/articles_database";
 
 const BlogPage = () => (
-  <React.Fragment>
+  <div>
     <h1>Blog</h1>
-    {/** Render `ArticlesList` component, while `articles_data` is used as function parameter that have access to `articles_database` */}
+    <div>
+        {/** Render `ArticlesList` component, while `articles_data` is used as function parameter that have access to `articles_database` */}
 
-    <Art_List articles_data={art_DB} />
+        <ArticlesList articles_data={articlesDatabase} />
 
-    {/**
-    If we would like to render only specific article from Array of objects we can filter result like this:
-    <Art_List articles_data={art_DB.filter(chooseOne => chooseOne === art_DB[0])} />
-  */}
+        {/**
+        If we would like to render only specific article from Array of objects we can filter result like this:
+        <Art_List articles_data={art_DB.filter(chooseOne => chooseOne === art_DB[0])} />
+      */}
 
-    {/** Function (component) `ArticlesList` will `map` over array of `articles_database` objects */}
-  </React.Fragment>
+        {/** Function (component) `ArticlesList` will `map` over array of `articles_database` objects */}
+    </div>
+  </div>
 );
 
 export default BlogPage;

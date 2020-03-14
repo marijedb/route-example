@@ -4,14 +4,14 @@ import MainNav from "./components/MainNav";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import BlogPage from "./pages/BlogPage";
-import OneArticle from "./pages/SingleArticlePage";
-import "./App.css";
 import SingleArticle from "./pages/SingleArticlePage";
+import "./App.css";
+
 
 function App() {
   return (
     <Router>
-      <div className="app">
+      <div>
         <MainNav />
         <div className="page-body">
           <Route path="/" component={HomePage} exact />
